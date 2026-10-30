@@ -1,0 +1,597 @@
+<!doctype html><html lang="el"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Μια νύχτα στη Βηθλεέμ · Έκδοση 17</title><style>
+*{box-sizing:border-box}body{margin:0;background:#0b132a;color:#fff5dd;font-family:Georgia,serif}button{cursor:pointer;font:inherit;touch-action:manipulation}button:focus-visible{outline:4px solid white;outline-offset:3px}.hidden{display:none!important}.app{min-height:100dvh;max-width:1300px;margin:auto;position:relative;overflow:hidden;background:#172341}.screen{min-height:100dvh;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:24px}.welcome{background:linear-gradient(0deg,#06112ee9,#08132a25 55%,#08132a44),url('assets/petros.jpg') center/cover}.title{text-align:center;text-shadow:0 4px 15px #000;font-size:clamp(29px,4.6vw,62px);margin:0}.sub{text-align:center;font-size:clamp(16px,2.1vw,26px);color:#ffe0a3}.bottom{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}.btn{border:2px solid #f9d49a;border-radius:20px;padding:14px 24px;min-height:62px;background:linear-gradient(#ffecba,#e9b969);color:#2c1c13;font-weight:bold;box-shadow:0 6px 0 #785329;font-size:clamp(18px,2vw,24px)}.btn.dark{background:#192a50;color:#fff4dd;box-shadow:0 6px 0 #071024}.btn:active{transform:translateY(3px);box-shadow:none}.map{background:radial-gradient(ellipse at 50% 20%,#35507c,#0d1732 72%)}.stars{position:absolute;inset:0;pointer-events:none;background-image:radial-gradient(2px 2px at 12% 16%,#fff8d7 98%,transparent),radial-gradient(2px 2px at 34% 8%,#fff 98%,transparent),radial-gradient(3px 3px at 70% 15%,#fff2bd 98%,transparent),radial-gradient(2px 2px at 88% 23%,#fff 98%,transparent),radial-gradient(2px 2px at 58% 30%,#fff 98%,transparent);animation:twinkle 3s ease-in-out infinite alternate}@keyframes twinkle{to{opacity:.45}}.map-head{z-index:2;text-align:center}.map-head h2{font-size:clamp(28px,4vw,52px);margin:5px 0}.town{position:relative;width:min(1050px,100%);height:min(58vh,530px);min-height:360px;z-index:2;border:2px solid #ac8b5d;border-radius:30px;overflow:hidden;background:linear-gradient(#13234777,#1c243455),linear-gradient(160deg,#202f50 0 42%,#6a523c 42% 100%);box-shadow:0 14px 40px #0007}.hill{position:absolute;bottom:-18%;width:130%;height:65%;left:-10%;border-radius:50% 50% 0 0;background:#5e4c3b}.hill.two{bottom:-35%;left:18%;background:#8b6745}.house{position:absolute;bottom:18%;width:18%;height:31%;background:#b88e61;border:3px solid #5d4637;border-radius:12px 12px 3px 3px;box-shadow:inset 0 0 30px #4b332c}.house:before{content:'';position:absolute;bottom:100%;left:-9%;width:118%;height:35%;background:#78533e;clip-path:polygon(50% 0,100% 100%,0 100%)}.house:after{content:'';position:absolute;left:38%;bottom:0;width:25%;height:46%;border-radius:30px 30px 0 0;background:#4b3025;box-shadow:0 0 15px #ffdc8a}.h1{left:12%;bottom:20%}.h2{left:39%;bottom:24%;width:16%;height:24%}.h3{left:71%;bottom:17%;width:17%;height:27%}.starbig{position:absolute;top:8%;left:50%;font-size:clamp(36px,5vw,72px);color:#ffedab;text-shadow:0 0 25px #ffe99e;animation:twinkle 2s infinite alternate}.point{position:absolute;z-index:4;border:2px solid #f7d39a;border-radius:22px;background:#15294adf;color:#fff7e7;padding:12px;min-width:130px;min-height:80px;font-size:clamp(16px,1.8vw,22px);box-shadow:0 0 22px #f8d28d55}.point span{font-size:clamp(27px,3vw,43px);display:block}.point.done{border-color:#b6f4c1;background:#1d5039ed}.p1{top:20%;left:5%}.p2{top:53%;left:24%}.p3{top:20%;right:7%}.p4{top:57%;right:6%}.locked{position:absolute;left:46%;bottom:12%;border:2px solid #edcc87;border-radius:18px;padding:10px;background:#19233dcc;color:#fff2cf;font-size:28px;z-index:3}.progress{z-index:2;font-size:clamp(24px,3vw,35px);letter-spacing:8px;text-shadow:0 0 10px #ffcf83}.footer{z-index:2;display:flex;gap:10px;flex-wrap:wrap;justify-content:center}.overlay{position:fixed;z-index:10;inset:0;background:#020715dd;display:grid;place-items:center;padding:16px}.card{width:min(660px,100%);max-height:92dvh;overflow:auto;text-align:center;border:3px solid #e5c28a;border-radius:24px;padding:clamp(18px,4vw,36px);background:linear-gradient(155deg,#30476e,#101a33);box-shadow:0 20px 60px #0009}.card h2{font-size:clamp(25px,3.4vw,39px)}.icon{font-size:65px}.actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}.guide{font:18px/1.5 system-ui,sans-serif;color:#f8e7cb}.guide details{margin:15px 0;text-align:left}.guide summary{cursor:pointer}.badge{background:#24395b;border-radius:14px;padding:10px;margin:12px auto}.ending{background:radial-gradient(ellipse at 50% 65%,#ae8156,#233255 65%,#111932);text-align:center;justify-content:center;gap:20px}.nativity{font-size:clamp(80px,16vw,180px);filter:drop-shadow(0 0 20px #f6d99b)}@media(max-width:650px){.screen{padding:15px}.town{height:55vh;min-height:380px}.point{min-width:108px;min-height:78px;font-size:14px;padding:8px}.p1{left:2%;top:14%}.p2{left:5%;top:58%}.p3{right:2%;top:14%}.p4{right:2%;top:58%}.locked{left:40%;bottom:18%}.title{font-size:30px}.map-head h2{font-size:28px}}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}.map{background:radial-gradient(ellipse at 50% 15%,#49618d,#0c1730 80%)}.town{background:linear-gradient(180deg,#17274c 0%,#3e4361 47%,#82664b 100%);border:5px solid #b8996b;box-shadow:inset 0 0 80px #050b20,0 18px 55px #000a}.town:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 20% 18%,#f5e7ae 1px,transparent 3px),radial-gradient(circle at 76% 10%,#fff2c0 1px,transparent 3px),radial-gradient(circle at 42% 24%,#fff 1px,transparent 2px);background-size:180px 110px;pointer-events:none}.hill{background:#69533f}.hill.two{background:#92704f}.house{background:linear-gradient(95deg,#98724f,#d7ad78 45%,#8d6247);border-color:#5d4436;box-shadow:inset -15px -12px 20px #4b332c55,0 7px 15px #21160e88}.house:after{box-shadow:0 0 20px 5px #ffcc7388;background:#513225}.point{min-width:90px;min-height:86px;background:#15294a88;border:2px solid #f8d698a8;border-radius:50%;backdrop-filter:blur(2px);transition:transform .2s,box-shadow .2s}.point:hover,.point:focus-visible{transform:scale(1.09);box-shadow:0 0 30px #ffe4a6}.point span{font-size:clamp(36px,5vw,62px)}.p1{top:19%;left:7%}.p2{top:57%;left:28%}.p3{top:16%;right:8%}.p4{top:57%;right:8%}.lantern{position:absolute;z-index:3;color:#ffdf9a;text-shadow:0 0 15px #ffd17d;font-size:36px;animation:twinkle 2s alternate infinite}.l1{left:18%;bottom:29%}.l2{left:48%;bottom:34%}.l3{right:15%;bottom:25%}.star-finish{font-size:40px;min-width:110px;animation:glow 2s ease-in-out infinite alternate}@keyframes glow{to{box-shadow:0 0 35px 12px #ffe2a2}}.card{background:radial-gradient(circle at 50% 0%,#51608a,#15223c 75%)}.icon{font-size:clamp(100px,17vw,170px)}.locked{border-radius:50%;width:75px;height:75px}.progress{color:#ffe4a1}.welcome{background-position:center 32%}@media(max-width:650px){.point{min-width:70px;min-height:75px}.point span{font-size:38px}.p2{left:18%}.p4{right:4%}} </style><style id="safe-cover-173">#welcome.welcome{padding:0;min-height:100dvh;background:#071329;position:relative;display:flex;justify-content:center;align-items:center;overflow:hidden}#welcome .cover-173{display:block;width:100%;height:100dvh;object-fit:contain;pointer-events:none}#welcome .start-173{position:absolute;left:39%;top:79%;width:23%;height:13%;border:0;border-radius:20px;background:transparent;color:transparent;font-size:0;cursor:pointer;z-index:3}#welcome .start-173:focus-visible{outline:4px solid #fff0ac}#welcome #hearIntro{display:none!important}#welcome .credit-173{position:absolute;right:1%;bottom:1%;padding:4px 8px;border-radius:6px;background:#08152ac7;color:#fff3d9;font:clamp(9px,1vw,14px)/1.3 system-ui,sans-serif;z-index:2}#welcome.hidden{display:none!important}@media(max-aspect-ratio:1672/941){#welcome .start-173{top:calc(50% + (100vw * .29));height:calc(100vw * .07)}#welcome .credit-173{bottom:1%}}</style><style id="cover-credit-fix">#welcome .credit-173{display:none!important}</style><style id="map-only-175">
+/* Only the four-choice map is restyled. The approved welcome and other scenes are untouched. */
+#map.screen{padding:0;justify-content:center;background:#07132b}
+#map .map-head{display:none!important}
+#map .town{width:100%;max-width:1300px;min-height:0;height:auto;aspect-ratio:1648/928;border:0;border-radius:0;box-shadow:none;overflow:hidden;background:url('assets/map_175.jpg') center/100% 100% no-repeat}
+#map .town:before,#map .town .hill,#map .town .house,#map .town .lantern,#map .town .starbig{display:none!important}
+#map .point{position:absolute;top:32%!important;bottom:auto!important;right:auto!important;min-width:0;min-height:0;width:16.8%;height:28%;border:0;border-radius:18px;background:transparent!important;box-shadow:none!important;outline:0!important;padding:0;color:transparent;font-size:0;opacity:1;filter:none;animation:none!important;z-index:9}
+#map .point span{visibility:hidden}
+#map .point.p2{left:23.7%!important}
+#map .point.p1{left:42.0%!important}
+#map .point.p3{left:60.3%!important}
+#map .point.p4{left:79.0%!important}
+#map .point.future{cursor:not-allowed}
+#map .point.available{outline:3px solid #fff0b5!important;outline-offset:2px!important;box-shadow:0 0 18px #ffe5a8!important;animation:nextGlow 2s infinite alternate!important}
+#map .point:focus-visible{outline:4px solid white!important}
+#map .sky-progress{position:absolute;inset:0;z-index:8;pointer-events:none}
+#map .sky-progress span{position:absolute;top:25.2%!important;font-size:clamp(25px,3.4vw,49px);line-height:1;color:transparent;filter:none;text-shadow:none}
+#map .sky-progress span:nth-child(1){left:31.5%!important}
+#map .sky-progress span:nth-child(2){left:49.8%!important}
+#map .sky-progress span:nth-child(3){left:68.4%!important}
+#map .sky-progress span:nth-child(4){left:87.2%!important}
+#map .sky-progress span.lit{color:#ffe37c;filter:drop-shadow(0 0 10px #ffe27e) drop-shadow(0 0 17px #ffbd4e)}
+#map .locked{position:absolute;left:auto;right:1%;bottom:2%;width:auto;height:auto;min-width:65px;border-radius:18px;z-index:12;background:#182b4cf2}
+#map .footer{position:absolute;bottom:1%;left:1%;z-index:12;gap:8px}
+#map .footer .btn{font-size:20px;min-height:46px;padding:7px 12px}
+@media(max-aspect-ratio:1648/928){#map .town{width:100%;height:auto}#map .point{border-radius:10px}#map .footer .btn{font-size:16px;min-height:35px;padding:4px 8px}}
+</style>
+<style id="map-star-single-glow">
+#map .sky-progress span{font-size:0!important;color:transparent!important;text-shadow:none!important;filter:none!important;top:25.6%!important;width:6.4%;height:9.5%;transform:translateX(-50%);border-radius:50%;background:transparent!important;opacity:0;pointer-events:none}
+#map .sky-progress span:nth-child(1){left:32.2%!important}
+#map .sky-progress span:nth-child(2){left:50.3%!important}
+#map .sky-progress span:nth-child(3){left:69.2%!important}
+#map .sky-progress span:nth-child(4){left:88.0%!important}
+#map .sky-progress span.lit{opacity:1!important;background:radial-gradient(ellipse at center,#fff7b9e6 0%,#ffe37dba 35%,#ffd05a70 56%,transparent 75%)!important;mix-blend-mode:screen;box-shadow:0 0 18px 5px #ffd36c99,0 0 32px 10px #ffdb7166;animation:mapGlow 1.4s ease-in-out infinite alternate}
+@keyframes mapGlow{from{filter:brightness(.85)}to{filter:brightness(1.25)}}
+</style>
+</head><body><main class="app"><section class="screen welcome" id="welcome"><img class="cover-173" src="assets/cover_173.jpg" alt="Ο Πέτρος με ένα προβατάκι, το αστέρι και το σπήλαιο της Βηθλεέμ"><button id="begin" class="start-173" type="button" aria-label="Ξεκινάμε">Ξεκινάμε</button><button id="hearIntro" class="hidden" type="button" aria-label="Άκου την εισαγωγή">🔊</button><div class="credit-173">Εύα Κομνηνού · 25ο Νηπιαγωγείο Περιστερίου · Τμήμα Ένταξης</div></section><section class="screen map hidden" id="map"><div class="stars"></div><header class="map-head"><h2>⭐ Η Βηθλεέμ</h2></header><div class="town"><div class="starbig" id="guidingStar">✦</div><div class="sky-progress" id="progress" aria-label="Τέσσερα αστέρια των ανακαλύψεων"><span>☆</span><span>☆</span><span>☆</span><span>☆</span></div><div class="hill"></div><div class="hill two"></div><div class="house h1"></div><div class="house h2"></div><div class="house h3"></div><div class="lantern l1">✦</div><div class="lantern l2">✦</div><div class="lantern l3">✦</div><button class="point p1" data-id="shepherds"><span>🐑</span></button><button class="point p2" data-id="homes"><span>🏘️</span></button><button class="point p3" data-id="star"><span>⭐</span></button><button class="point p4" data-id="gifts"><span>🎁</span></button><button class="locked" id="reveal" disabled aria-label="Η φάτνη είναι ακόμη κλειδωμένη">🔒</button></div><div class="footer"><button class="btn dark" id="narrateMap" aria-label="Άκου οδηγίες">🔊</button><button class="btn dark" id="home" aria-label="Πίσω στην αρχή">🏠</button></div></section><section class="screen ending hidden" id="ending"><div class="nativity" aria-label="Η Αγία Οικογένεια">👶🏻</div><h1 class="title">Η Γέννηση του Χριστού</h1><div class="bottom"><button class="btn" id="hearEnd" aria-label="Άκου το τέλος">🔊</button><button class="btn dark" id="restart">↻ Ξανά</button></div></section></main><div class="overlay hidden" id="modal" role="dialog" aria-modal="true"><div class="card"><div class="scene" id="scene"><div class="scene-night">✦ &nbsp; ✧ &nbsp; ✦</div><div class="scene-art" id="sceneArt"></div><div class="scene-interact" id="sceneInteract"></div><div class="scene-note" id="sceneNote" aria-live="polite"></div><button class="soundscape hidden" id="soundscape" aria-label="Άκου τη φωτιά και τον άνεμο">♫ ✨</button></div><h2 id="modalTitle" class="visually-hidden"></h2><div class="actions"><button class="btn dark" id="listen" aria-label="Επανάληψη αφήγησης">🔊</button><button class="btn" id="task" aria-label="Συνεχίζουμε στην τάξη">📖</button><button class="btn star-finish" id="finish" aria-label="Φώτισε το αστέρι">⭐</button></div><div class="guide hidden" id="teacher"></div><p><button class="btn dark" id="close" aria-label="Πίσω στον χάρτη">↩</button></p></div></div><script>
+const $=id=>document.getElementById(id);let done=new Set(),current=null;const data={shepherds:{icon:'🐑',title:'Οι βοσκοί',speech:'Στα χωράφια έξω από τη Βηθλεέμ, οι βοσκοί φύλαγαν τα πρόβατά τους. Εκείνη τη νύχτα άκουσαν το χαρμόσυνο μήνυμα για τη γέννηση του Χριστού. Τώρα θα ζωντανέψουμε τους ήχους της νύχτας.',task:'Δημιουργήστε ένα ηχοτοπίο με άνεμο, πρόβατα και φωτιά. Μια ομάδα για κάθε ήχο. Η νηπιαγωγός γίνεται μαέστρος.'},homes:{icon:'🏘️',title:'Τα σπίτια της Βηθλεέμ',speech:'Η Βηθλεέμ ήταν γεμάτη ταξιδιώτες. Η Μαρία και ο Ιωσήφ χρειάζονταν ένα μέρος για να ξεκουραστούν. Ας δημιουργήσουμε ένα απλό καταφύγιο στην τάξη μας.',task:'Με τουβλάκια, χαρτόκουτα και υφάσματα, φτιάξτε συνεργατικά ένα μικρό καταφύγιο με στέγη και είσοδο.'},star:{icon:'⭐',title:'Το μονοπάτι του αστεριού',speech:'Οι Μάγοι είχαν παρατηρήσει ένα ξεχωριστό αστέρι. Ξεκίνησαν ένα μακρινό ταξίδι για να τιμήσουν το παιδί. Θα φτιάξουμε κι εμείς ένα μονοπάτι από αστέρια.',task:'Στρώστε χάρτινα αστέρια στο πάτωμα. Συνεχίστε ένα απλό μοτίβο με μεγάλα και μικρά αστέρια. Περάστε όλοι τη διαδρομή.'},gifts:{icon:'🎁',title:'Τα μυστηριώδη δώρα',speech:'Οι Μάγοι πρόσφεραν πολύτιμα δώρα. Χρυσό, λιβάνι και σμύρνα. Στην τάξη μας θα εξερευνήσουμε τρία μυστηριώδη κουτιά.',task:'Ετοιμάστε τρία κουτιά με χρυσαφένια αντικείμενα, εικόνες αρωματικών ρητινών και κλειστό δοχείο. Τα παιδιά παρατηρούν και κάνουν υποθέσεις. Χωρίς καύση ή έντονα αρώματα.'}};
+function say(s){if(!('speechSynthesis' in window))return; speechSynthesis.cancel();let u=new SpeechSynthesisUtterance(s);u.lang='el-GR';u.rate=.78;u.pitch=.78;let v=speechSynthesis.getVoices().filter(x=>x.lang.toLowerCase().startsWith('el'));if(v.length)u.voice=v[0];speechSynthesis.speak(u)}
+function show(id){['welcome','map','ending'].forEach(x=>$(x).classList.toggle('hidden',x!==id))}function close(){if('speechSynthesis' in window)speechSynthesis.cancel();$('modal').classList.add('hidden');$('teacher').classList.add('hidden')}
+$('hearIntro').onclick=()=>say('Πριν από πολλά χρόνια, στη μικρή πόλη της Βηθλεέμ, ζούσε ένα αγόρι που το έλεγαν Πέτρο. Εκείνη τη νύχτα, κάτι θαυμαστό συνέβαινε. Ας το ανακαλύψουμε μαζί του.');$('begin').onclick=()=>{show('map');say('Πατήστε ένα μέρος της Βηθλεέμ και ανακαλύψτε την ιστορία του.')};$('narrateMap').onclick=()=>say('Πατήστε ένα από τα τέσσερα μέρη της Βηθλεέμ.');$('home').onclick=()=>show('welcome');document.querySelectorAll('.point').forEach(b=>b.onclick=()=>{current=b.dataset.id;let d=data[current];renderScene(current);$('modalTitle').textContent=d.title;$('teacher').classList.add('hidden');$('modal').classList.remove('hidden');say(d.speech)});$('listen').onclick=()=>say(data[current].speech);$('task').onclick=()=>{document.getElementById('sceneNote').textContent='✨';say('Η ιστορία συνεχίζεται τώρα στην τάξη. Ύστερα πατήστε το φωτεινό αστέρι.');};$('finish').onclick=()=>{done.add(current);document.querySelector(`[data-id="${current}"]`).classList.add('done');updateSky();close();if(done.size===4){$('reveal').disabled=false;$('reveal').textContent='✨';$('guidingStar').classList.add('bright');say('Τα τέσσερα αστέρια άναψαν. Το μυστικό της Βηθλεέμ μάς περιμένει.')}else say('Ένα ακόμη αστέρι φωτίστηκε στον ουρανό. Συνεχίζουμε.')};$('close').onclick=close;$('reveal').onclick=()=>{if(done.size!==4)return;show('ending');say('Και τότε, ο Πέτρος ανακάλυψε το χαρμόσυνο γεγονός. Στη Βηθλεέμ είχε γεννηθεί ο Χριστός. Ας δημιουργήσουμε τώρα τη δική μας φάτνη στην τάξη.')};$('hearEnd').onclick=()=>say('Στη Βηθλεέμ γεννήθηκε ο Χριστός. Η ιστορία της Γέννησης γέμισε την καρδιά των ανθρώπων με χαρά και ελπίδα.');$('restart').onclick=()=>{done.clear();document.querySelectorAll('.point').forEach(b=>b.classList.remove('done'));updateSky();$('reveal').disabled=true;$('reveal').textContent='🔒';$('guidingStar').classList.remove('bright');show('welcome')};
+</script>
+<style>
+.sky-progress{position:absolute;top:6%;left:4%;display:flex;gap:clamp(8px,1.7vw,22px);z-index:5;background:#0d1c3a99;border:2px solid #bda071;border-radius:25px;padding:9px 16px;pointer-events:none}.sky-progress span{font-size:clamp(32px,4.6vw,57px);line-height:1;color:#a4a8bd;text-shadow:0 0 3px #e4d1ae;transition:all .7s}.sky-progress span.lit{color:#ffe19b;text-shadow:0 0 10px #ffe09b,0 0 26px #ffcd60;animation:starborn .8s ease-out}.starbig{left:50%;top:6%;z-index:2}.starbig.bright{font-size:clamp(70px,10vw,120px);text-shadow:0 0 25px #fff,0 0 70px #ffe58b;animation:glowstar 1.5s infinite alternate}@keyframes starborn{from{transform:scale(.1) translateY(50px);opacity:0}to{transform:scale(1);opacity:1}}@keyframes glowstar{to{filter:brightness(1.6)}}
+.card{width:min(850px,100%);padding:18px 22px}.scene{min-height:270px;position:relative;border-radius:22px;border:2px solid #b59b72;overflow:hidden;background:linear-gradient(#13244a 0%,#263b5b 55%,#8c6b4c 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px}.scene-night{position:absolute;top:6px;left:0;width:100%;color:#ffe7a5;letter-spacing:55px;pointer-events:none}.scene-art{font-size:clamp(58px,9vw,110px);filter:drop-shadow(0 5px 9px #0009);margin-top:15px}.scene-interact{display:flex;justify-content:center;align-items:center;gap:clamp(8px,2vw,20px);flex-wrap:wrap;z-index:1}.discovery{border:2px solid #f3d398;background:#172948d9;color:white;border-radius:20px;font-size:clamp(33px,5vw,59px);min-width:75px;min-height:70px;box-shadow:0 4px 12px #0008}.discovery.revealed{background:#746342;border-color:#fff0b5;box-shadow:0 0 22px #ffde8d}.scene-note{font-size:20px;min-height:27px;color:#ffedb5;z-index:1}.actions{margin-top:15px}.star-finish{min-width:90px}.point{border-radius:50%}.locked:disabled{opacity:.75}.map-head h2{font-size:clamp(23px,3vw,37px)}@media(max-width:650px){.sky-progress{top:3%;left:2%;gap:4px;padding:7px}.sky-progress span{font-size:30px}.starbig{left:67%;top:3%}.scene{min-height:245px}.discovery{min-width:65px;min-height:60px}.card{padding:12px}.point{min-width:68px}}
+</style>
+<script>
+const scenes={
+ shepherds:{art:'🌙 🐑',items:[['🐑',''],['🔥',''],['🌬️',''],['👣','']]},
+ homes:{art:'🌙 🏘️',items:[['🚪','Μια κλειστή πόρτα.'],['🚪','Ένα σπίτι γεμάτο κόσμο.'],['🚪','Ένα ήσυχο καταφύγιο!']]},
+ star:{art:'🌠 🐪',items:[['⭐','Ένα μεγάλο αστέρι.'],['✦','Ένα μικρό αστέρι.'],['⭐','Το μονοπάτι φωτίζεται!']]},
+ gifts:{art:'🐪 🎁',items:[['🎁','Χρυσός.'],['🎁','Λιβάνι.'],['🎁','Σμύρνα.']]}
+};
+function renderScene(id){const d=scenes[id];$('scene').dataset.place=id;$('sceneArt').textContent=d.art;$('sceneNote').textContent='';$('sceneInteract').replaceChildren();$('soundscape').classList.toggle('hidden',id!=='shepherds');d.items.forEach(([icon,spoken],i)=>{let b=document.createElement('button');b.className='discovery';b.textContent=icon;b.setAttribute('aria-label','Ανακάλυψη '+(i+1));b.onclick=()=>{b.classList.add('revealed');if(id==='homes')b.textContent=['🏠','🏘️','🛖'][i];else if(id==='gifts')b.textContent=['🪙','🌿','🏺'][i];else if(id==='star')b.textContent='🌟';else b.textContent=icon;$('sceneNote').textContent='✦';if(id==='shepherds'){playNature(i)}else{say(spoken)}};$('sceneInteract').appendChild(b)})}
+$('soundscape').onclick=()=>{[1,2].forEach((n,i)=>setTimeout(()=>playNature(n),i*1250))};function playNature(i){if(i===0||i===3){const b=document.querySelectorAll('#sceneInteract .discovery')[i];if(b){b.classList.add('revealed');b.animate([{transform:'scale(1)'},{transform:'scale(1.15)'},{transform:'scale(1)'}],{duration:600})}return;}let a=new Audio(i===1?'sounds/fire.wav':'sounds/wind.wav');a.volume=.75;a.play().catch(()=>{});}function updateSky(){document.querySelectorAll('#progress span').forEach((el,i)=>{let lit=i<done.size;el.textContent=lit?'★':'☆';el.classList.toggle('lit',lit)})}
+</script>
+<style>
+/* Illustrated night-time locations, with large touch targets and no reading required */
+.scene{min-height:350px;isolation:isolate;background-size:cover;background-position:center;box-shadow:inset 0 0 80px #050c1b}
+.scene[data-place="shepherds"]{background-image:linear-gradient(0deg,#07132977,#07132911),url('assets/shepherds.svg')}
+.scene[data-place="homes"]{background-image:linear-gradient(0deg,#07132977,#07132911),url('assets/homes.svg')}
+.scene[data-place="star"]{background-image:linear-gradient(0deg,#07132977,#07132911),url('assets/journey.svg')}
+.scene[data-place="gifts"]{background-image:linear-gradient(0deg,#07132977,#07132911),url('assets/gifts.svg')}
+.scene-art{font-size:0;height:125px;min-height:125px}
+.scene-interact{background:#0b1735b3;padding:10px 16px;border:1px solid #e8c88b99;border-radius:24px}
+.discovery{background:#243456e6;min-width:88px;min-height:76px}
+.soundscape{position:relative;z-index:2;border:2px solid #f3d398;border-radius:18px;background:#263c58;color:#ffe8ad;font-size:26px;padding:7px 20px;margin-bottom:8px}
+.sky-progress{top:4%;left:3%;border:none;background:#09172c55;gap:12px}.sky-progress span{font-size:clamp(38px,5.5vw,66px)}
+@media(max-width:650px){.scene{min-height:320px}.scene-art{height:95px;min-height:95px}.sky-progress span{font-size:32px}}
+</style><style>/* Έκδοση 6: αστέρια στον ουρανό, χωρίς πλαίσιο και χωρίς επικάλυψη των σημείων */
+.sky-progress{position:absolute;inset:0;display:block;z-index:5;background:none;border:0;padding:0;pointer-events:none;box-shadow:none}
+.sky-progress span{position:absolute;display:block;font-size:clamp(34px,4vw,55px);line-height:1;filter:drop-shadow(0 0 5px #ffcf86);letter-spacing:normal}
+.sky-progress span:nth-child(1){left:24%;top:4%}
+.sky-progress span:nth-child(2){left:35%;top:13%}
+.sky-progress span:nth-child(3){left:64%;top:4%}
+.sky-progress span:nth-child(4){left:83%;top:3%}
+@media(max-width:650px){.sky-progress span{font-size:clamp(25px,6vw,36px)}.sky-progress span:nth-child(1){left:22%;top:3%}.sky-progress span:nth-child(2){left:34%;top:12%}.sky-progress span:nth-child(3){left:64%;top:3%}.sky-progress span:nth-child(4){left:83%;top:3%}}
+</style>
+<style>
+#pasture{position:fixed;inset:0;z-index:30;background:#070e22;display:flex;align-items:center;justify-content:center;padding:8px}
+#pasture.hidden{display:none!important}
+.pasture-stage{width:min(100%,calc(96dvh * 1.77778));aspect-ratio:16/9;position:relative;background:url('assets/boskotopi.jpg') center/100% 100% no-repeat;border:2px solid #b98a4c;border-radius:16px;overflow:hidden;box-shadow:0 0 45px #000}
+.pasture-hit{position:absolute;border:0;background:transparent;border-radius:50%;width:9.3%;aspect-ratio:1;transform:translate(-50%,-50%);cursor:pointer;touch-action:manipulation}
+.pasture-hit:focus-visible{outline:4px solid #fff2b6;outline-offset:2px}
+.pasture-hit.active:after{content:'✦';position:absolute;inset:-10%;display:grid;place-items:center;font-size:clamp(18px,4vw,55px);color:#ffe1a0;text-shadow:0 0 18px #fff;animation:flash 1s ease-out forwards;pointer-events:none}
+@keyframes flash{0%{opacity:0;transform:scale(.2)}40%{opacity:1;transform:scale(1.1)}100%{opacity:0;transform:scale(1.6)}}
+#sheepHit{left:14%;top:63%}#fireHit{left:50%;top:60%}#windHit{left:64%;top:49%}
+#pastureHome{left:5.4%;top:91%;width:8%}#pastureBook{left:50%;top:91%;width:8%}#pastureNext{left:94.5%;top:91%;width:8%}
+.pasture-top{position:absolute;top:1%;left:1%;display:flex;gap:8px}
+.pasture-top button{background:#0b1d38c7;color:#fff5dc;border:1px solid #f4d59b;border-radius:14px;padding:7px 12px;font-size:clamp(15px,2vw,23px);cursor:pointer}
+.pasture-caption{position:absolute;bottom:12%;left:35%;width:30%;text-align:center;color:#fff1be;text-shadow:0 2px 8px #000;font-size:clamp(13px,1.8vw,22px);pointer-events:none}
+@media(max-aspect-ratio:4/5){#pasture{padding:0}.pasture-stage{width:100vw;border-radius:0}}
+</style>
+<section id="pasture" class="hidden" aria-label="Το βοσκοτόπι της Βηθλεέμ">
+ <div class="pasture-stage">
+ <div class="pasture-top"><button id="pastureListen" aria-label="Άκου την αφήγηση">🔊</button><button id="pastureSoundscape" aria-label="Άκου φωτιά και άνεμο">♫</button></div>
+ <button class="pasture-hit" id="sheepHit" aria-label="Πρόβατο"></button>
+ <button class="pasture-hit" id="fireHit" aria-label="Φωτιά"></button>
+ <button class="pasture-hit" id="windHit" aria-label="Άνεμος"></button>
+ 
+ <button class="pasture-hit" id="pastureHome" aria-label="Επιστροφή στον χάρτη"></button>
+ <button class="pasture-hit" id="angelBook" aria-label="Άνοιξε το βιβλίο δραστηριοτήτων" type="button">📖</button>
+
+ <button class="pasture-hit" id="pastureNext" aria-label="Ολοκλήρωση και φωτισμός αστεριού"></button>
+ <div class="pasture-caption" id="pastureCaption" aria-live="polite"></div>
+ </div>
+</section>
+<script>
+// Dedicated illustrated shepherds screen. The other three scenes keep their existing behavior.
+const originalShepherdButton=document.querySelector('.point[data-id="shepherds"]');
+originalShepherdButton.onclick=()=>{current='shepherds';$('pasture').classList.remove('hidden');$('pastureCaption').textContent='';say(data.shepherds.speech)};
+function natureSound(which){const sound=which==='fire'?'sounds/fire.wav':which==='wind'?'sounds/wind.wav':null;if(!sound)return;const a=new Audio(sound);a.volume=.8;a.play().catch(()=>{})}
+function markPasture(id){let el=$(id);el.classList.remove('active');void el.offsetWidth;el.classList.add('active');setTimeout(()=>el.classList.remove('active'),1100)}
+$('sheepHit').onclick=()=>{markPasture('sheepHit');$('pastureCaption').textContent='🐑';const a=new Audio('sounds/sheep.mp3');a.volume=.8;a.play().catch(()=>{});};
+$('fireHit').onclick=()=>{markPasture('fireHit');natureSound('fire');$('pastureCaption').textContent='';};
+$('windHit').onclick=()=>{markPasture('windHit');natureSound('wind');$('pastureCaption').textContent='';};
+
+$('pastureSoundscape').onclick=()=>{natureSound('fire');setTimeout(()=>natureSound('wind'),900)};
+$('pastureListen').onclick=()=>say(data.shepherds.speech);
+
+$('pastureHome').onclick=()=>{speechSynthesis?.cancel();$('pasture').classList.add('hidden')};
+$('pastureNext').onclick=()=>{done.add('shepherds');originalShepherdButton.classList.add('done');updateSky();$('pasture').classList.add('hidden');if(done.size===4){$('reveal').disabled=false;$('reveal').textContent='✨';$('guidingStar').classList.add('bright');say('Τα τέσσερα αστέρια άναψαν. Το μυστικό της Βηθλεέμ μάς περιμένει.')}else say('Ένα ακόμη αστέρι φωτίστηκε στον ουρανό. Συνεχίζουμε.')};
+</script>
+
+<style>
+#houses{position:fixed;inset:0;z-index:31;background:#080f21;display:flex;justify-content:center;align-items:center;padding:8px}
+#houses.hidden{display:none!important}
+.houses-stage{width:min(100%,calc(96dvh * 1.77778));aspect-ratio:16/9;position:relative;background:url('assets/spitia_vithleem.jpg') center/100% 100% no-repeat;border:2px solid #b98a4c;border-radius:16px;overflow:hidden;box-shadow:0 0 45px #000}
+.houses-hit{position:absolute;transform:translate(-50%,-50%);width:9%;aspect-ratio:1;border:0;background:transparent;border-radius:50%;cursor:pointer;touch-action:manipulation}
+.houses-hit:focus-visible{outline:4px solid #fff1b5}
+.houses-hit.active:after{content:'✦';position:absolute;inset:-10%;display:grid;place-items:center;font-size:clamp(20px,4vw,52px);color:#fff0b5;text-shadow:0 0 15px #fff;animation:flash 1s ease-out forwards;pointer-events:none}
+#houseDoor1{left:11%;top:39%}#houseDoor2{left:44.5%;top:43%}#houseDoor3{left:62%;top:48%}
+#houseBook{left:50%;top:88%}#houseHome{left:6%;top:90%}#houseNext{left:94%;top:90%}
+.houses-listen{position:absolute;top:2%;left:2%;background:#102440df;color:#fff;border:1px solid #f6d79b;border-radius:13px;font-size:23px;padding:6px 12px;cursor:pointer}
+.houses-feedback{position:absolute;left:50%;top:23%;transform:translateX(-50%);border:2px solid #f6dc9e;border-radius:23px;background:#172541e8;color:#fff3d0;box-shadow:0 0 25px #000a;padding:14px 28px;font-size:clamp(28px,6vw,65px);text-align:center;pointer-events:none;opacity:0;transition:opacity .25s}
+.houses-feedback.show{opacity:1}
+@media(max-aspect-ratio:4/5){#houses{padding:0}.houses-stage{width:100vw;border-radius:0}}
+</style>
+<section id="houses" class="hidden" aria-label="Τα σπίτια της Βηθλεέμ"><div class="houses-stage">
+<button class="houses-listen" id="housesListen" aria-label="Άκου την αφήγηση">🔊</button>
+<button class="houses-hit" id="houseDoor1" aria-label="Πρώτη πόρτα"></button>
+<button class="houses-hit" id="houseDoor2" aria-label="Δεύτερη πόρτα"></button>
+<button class="houses-hit" id="houseDoor3" aria-label="Τρίτη πόρτα"></button>
+<button class="houses-hit" id="houseBook" aria-label="Η ιστορία συνεχίζεται στην τάξη">📖</button>
+<button class="houses-hit" id="houseHome" aria-label="Πίσω στον χάρτη">⌂</button>
+<button class="houses-hit" id="houseNext" aria-label="Φώτισε το αστέρι">➜</button>
+<div class="houses-feedback" id="housesFeedback" aria-live="polite"></div><div class="door-reveal hidden" id="doorReveal" role="dialog" aria-label="Τι βρίσκεται πίσω από την πόρτα"><button id="doorRevealClose" class="reveal-close" aria-label="Κλείσε">✕</button><img class="door-picture" id="doorPicture" alt="Εικονογραφημένη ανακάλυψη πίσω από την πόρτα"><button class="reveal-return" id="doorReturn" aria-label="Επιστροφή στο σοκάκι">↩</button></div>
+</div></section>
+<script>
+const originalHomesButton=document.querySelector('.point[data-id="homes"]');
+originalHomesButton.onclick=()=>{current='homes';$('houses').classList.remove('hidden');$('doorReveal').classList.add('hidden');$('housesFeedback').classList.remove('show');say('Ο Πέτρος συνάντησε τη Μαρία και τον Ιωσήφ στα σοκάκια της Βηθλεέμ. Έψαχναν ένα ήσυχο μέρος για να ξεκουραστούν. Πάμε να ανοίξουμε τις πόρτες.')};
+let feedbackTimer;
+function houseFeedback(button,icon,words){const b=$(button);b.classList.remove('active');void b.offsetWidth;b.classList.add('active');const box=$('housesFeedback');box.textContent=icon;box.classList.add('show');clearTimeout(feedbackTimer);feedbackTimer=setTimeout(()=>box.classList.remove('show'),2500);if(words)say(words)}
+const doorScenes=[
+ {kind:'crowded',picture:'assets/door_1_v11.jpg',speech:'Το πρώτο σπίτι είναι γεμάτο ταξιδιώτες. Δεν υπάρχει ελεύθερος χώρος.'},
+ {kind:'occupied',picture:'assets/door_2_v11.jpg',speech:'Στο δεύτερο σπίτι ζουν ο παππούς, η γιαγιά, οι γονείς και πολλά παιδιά. Το σπίτι είναι γεμάτο.'},
+ {kind:'shelter',picture:'assets/door_3_v11.jpg',speech:'Ούτε εδώ υπάρχει χώρος. Ένας καλόκαρδος άνθρωπος δείχνει ένα ήσυχο μονοπάτι, μακριά από τα σπίτια. Ο Πέτρος ακολουθεί το φως.'}
+];
+function openDoor(n){const d=doorScenes[n];const r=$('doorReveal');r.className='door-reveal '+d.kind;$('doorPicture').src=d.picture;document.querySelectorAll('.houses-hit').forEach(b=>b.classList.remove('active'));$('houseDoor'+(n+1)).classList.add('active');say(d.speech)}
+$('houseDoor1').onclick=()=>openDoor(0);
+$('houseDoor2').onclick=()=>openDoor(1);
+$('houseDoor3').onclick=()=>openDoor(2);
+$('doorRevealClose').onclick=$('doorReturn').onclick=()=>{$('doorReveal').classList.add('hidden');if('speechSynthesis'in window)speechSynthesis.cancel()};
+$('housesListen').onclick=()=>say('Ο Πέτρος βοηθά τη Μαρία και τον Ιωσήφ να βρουν ένα ήσυχο μέρος. Πατήστε τις πόρτες.');
+$('houseBook').onclick=()=>houseFeedback('houseBook','📖 🧱 🛖','Τώρα μπορούμε να δημιουργήσουμε ένα ζεστό καταφύγιο μέσα στην τάξη μας.');
+$('houseHome').onclick=()=>{if('speechSynthesis'in window)speechSynthesis.cancel();$('houses').classList.add('hidden');$('doorReveal').classList.add('hidden')};
+$('houseNext').onclick=()=>{done.add('homes');originalHomesButton.classList.add('done');updateSky();$('houses').classList.add('hidden');$('doorReveal').classList.add('hidden');if(done.size===4){$('reveal').disabled=false;$('reveal').textContent='✨';$('guidingStar').classList.add('bright');say('Τα τέσσερα αστέρια άναψαν. Το μυστικό της Βηθλεέμ μάς περιμένει.')}else say('Ένα ακόμη αστέρι φωτίστηκε στον ουρανό. Συνεχίζουμε.')};
+</script>
+<style>
+.door-reveal{position:absolute;inset:3% 6%;z-index:20;border:5px solid #cba46b;border-radius:28px;background:radial-gradient(circle at 50% 20%,#795b42,#261d22 70%);box-shadow:0 0 0 200vmax #071125b0,0 15px 60px #000b;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:5%;animation:doorOpen .4s ease-out;overflow:hidden}
+.door-reveal:before{content:none}
+.door-reveal.shelter{background:radial-gradient(ellipse at 50% 65%,#7c684a,#27334a 62%,#111c35)}
+.door-picture{display:block;width:100%;height:100%;object-fit:cover;filter:none}.door-people{display:none}
+.reveal-close,.reveal-return{position:absolute;border:2px solid #f9db9b;border-radius:50%;width:clamp(46px,6vw,74px);height:clamp(46px,6vw,74px);background:#203554;color:#fff3d0;font-size:clamp(23px,3vw,38px);cursor:pointer;z-index:3}
+.reveal-close{right:3%;top:3%}.reveal-return{bottom:4%;left:50%;transform:translateX(-50%)}
+@keyframes doorOpen{from{transform:scale(.4);opacity:0}to{transform:scale(1);opacity:1}}
+@media(max-width:650px){.door-reveal{inset:12% 3%}}
+</style><style>
+/* Visual controls deliberately limited to three doors and storybook navigation. */
+#houseDoor1,#houseDoor2,#houseDoor3{width:10%;min-width:52px;min-height:52px;box-shadow:0 0 22px 8px #ffdf8a77;border:2px solid #ffe8b5aa;background:#5b3a1950;transition:box-shadow .2s}
+#houseDoor1:after,#houseDoor2:after,#houseDoor3:after{content:none!important}
+#houseBook,#houseHome,#houseNext{display:grid;place-items:center;width:8%;min-width:56px;min-height:56px;background:#3c2812d9;border:3px solid #f8d49b;border-radius:50%;color:#fff3d0;font-size:clamp(27px,4vw,55px);box-shadow:0 0 12px #ffd78d}
+#houseBook{width:8.5%}
+.door-reveal{border-radius:22px;border:4px solid #f4d18e}
+.reveal-return{left:7%;bottom:5%;transform:none}
+#houseDoor1,#houseDoor2,#houseDoor3{background:transparent!important;border:2px solid #ffe8b588!important;box-shadow:0 0 15px 4px #ffdf8a55!important}
+#houseDoor1:hover,#houseDoor2:hover,#houseDoor3:hover,#houseDoor1:focus-visible,#houseDoor2:focus-visible,#houseDoor3:focus-visible{box-shadow:0 0 25px 10px #ffe8adbb!important}
+</style>
+<style>
+#magoi{position:fixed;inset:0;z-index:35;background:#071025;display:grid;place-items:center;padding:7px}
+#magoi.hidden{display:none!important}
+.magoi-stage{position:relative;width:min(100%,calc(96dvh * 1.77778));aspect-ratio:16/9;background:url('assets/magoi_path_v13.jpg') center/100% 100% no-repeat;border:2px solid #b98a4c;border-radius:15px;overflow:hidden;box-shadow:0 0 45px #000}
+.magoi-control{position:absolute;transform:translate(-50%,-50%);border:0;background:transparent;cursor:pointer;touch-action:manipulation;width:9%;height:16%;border-radius:50%}
+.magoi-control:focus-visible,.trail-star:focus-visible{outline:3px solid #fff7bd;outline-offset:2px}
+#magoiHome{left:6%;top:91%}#magoiBook{left:50%;top:91%}#magoiNext{left:94%;top:91%}
+#magoiListen{position:absolute;top:2%;left:2%;background:#172849e8;border:2px solid #e5c18b;color:white;border-radius:50%;font-size:clamp(18px,2.6vw,31px);width:clamp(43px,5vw,65px);aspect-ratio:1;cursor:pointer}
+.trail-star{position:absolute;transform:translate(-50%,-50%);border:0;border-radius:50%;background:transparent;cursor:pointer;touch-action:manipulation;display:grid;place-items:center;transition:filter .25s,opacity .25s,transform .25s;filter:brightness(.85)}
+.trail-star.big{width:8.5%;aspect-ratio:1;font-size:clamp(30px,4.5vw,62px)}.trail-star.small{width:6%;aspect-ratio:1;font-size:clamp(23px,3.2vw,44px)}
+.trail-star span{color:#ffe9a2;text-shadow:0 0 8px #d48725,0 0 14px #ffe6a1}
+.trail-star.future{opacity:.15;pointer-events:none}.trail-star.current{opacity:1;animation:trailCall 1.5s ease-in-out infinite alternate}.trail-star.passed{opacity:1;filter:brightness(1.5);pointer-events:none}
+.trail-star.passed span{text-shadow:0 0 12px white,0 0 28px #ffde71,0 0 40px #fff1b6}
+@keyframes trailCall{to{filter:brightness(1.7);transform:translate(-50%,-50%) scale(1.15)}}
+#trailStatus{position:absolute;left:50%;top:7%;transform:translateX(-50%);font-size:clamp(22px,3vw,36px);color:#fff0c6;text-shadow:0 0 12px #000;pointer-events:none}
+#magoiNext.waiting{opacity:.35;pointer-events:none}
+.magoi-book-card{position:absolute;inset:14% 21% 18%;border:3px solid #f8db9d;border-radius:24px;background:linear-gradient(140deg,#f4e3bb,#fff9e5);box-shadow:0 0 0 200vmax #0710209e,0 0 35px #000;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:14px;z-index:5}
+.magoi-book-card.hidden{display:none!important}.book-pattern{font-size:clamp(27px,4vw,62px);color:#bd7b21;letter-spacing:.1em;text-align:center}.book-close{background:#774a22;color:white;border:2px solid #dfba74;border-radius:50%;font-size:30px;width:54px;height:54px;cursor:pointer}
+@media(max-width:700px){.magoi-book-card{inset:18% 12% 19%}.trail-star.big{width:11%}.trail-star.small{width:8%}}
+</style>
+<section id="magoi" class="hidden" aria-label="Το μονοπάτι των Μάγων"><div class="magoi-stage">
+<button id="magoiListen" aria-label="Άκου ξανά την αφήγηση">🔊</button>
+<div id="trailStars"></div><div id="trailStatus" aria-live="polite"></div>
+<button class="magoi-control" id="magoiBook" aria-label="Άνοιξε το βιβλίο"></button>
+<button class="magoi-control" id="magoiHome" aria-label="Επιστροφή στον χάρτη"></button>
+<button class="magoi-control waiting" id="magoiNext" aria-label="Ολοκλήρωσε την αποστολή"></button>
+<div class="magoi-book-card hidden" id="magoiBookCard" role="dialog" aria-label="Το μοτίβο των αστεριών"><div class="book-pattern">★ ✦ ★ ✦ ★ ✦</div><button class="book-close" id="magoiBookClose" aria-label="Κλείσε το βιβλίο">↩</button></div>
+</div></section>
+<script>
+const magoiBtn=document.querySelector('.point[data-id="star"]');
+const magoiSpeech='Μακριά από τη Βηθλεέμ, τρεις σοφοί ταξιδιώτες είδαν ένα αστέρι διαφορετικό από τα άλλα. Ξεκίνησαν ένα μεγάλο ταξίδι, ακολουθώντας το φως του. Ο Πέτρος ανακαλύπτει την ιστορία του ταξιδιού τους. Πατήστε τα φωτεινά αστέρια, ένα ένα.';
+const trailCoords=[[56,82],[65,76],[72,66],[79,59],[78,49],[75,42]];
+let trailStep=0;
+function trailRender(){
+ const root=$('trailStars');root.innerHTML='';
+ trailCoords.forEach(([x,y],i)=>{const b=document.createElement('button');b.className='trail-star '+(i%2?'small':'big')+' '+(i<trailStep?'passed':i===trailStep?'current':'future');b.style.left=x+'%';b.style.top=y+'%';b.setAttribute('aria-label',(i%2?'Μικρό':'Μεγάλο')+' αστέρι '+(i+1));b.innerHTML='<span>'+(i%2?'✦':'★')+'</span>';b.disabled=i!==trailStep;b.onclick=()=>{trailStep++;trailRender();if(trailStep===trailCoords.length){$('magoiNext').classList.remove('waiting');say('Το φωτεινό μονοπάτι ολοκληρώθηκε. Το ταξίδι των Μάγων συνεχίζεται.');} };root.appendChild(b)});
+ $('trailStatus').textContent=trailStep===trailCoords.length?'✨':'';
+}
+magoiBtn.onclick=()=>{current='star';trailStep=0;trailRender();$('magoiBookCard').classList.add('hidden');$('magoiNext').classList.add('waiting');$('magoi').classList.remove('hidden');say(magoiSpeech)};
+$('magoiListen').onclick=()=>say(magoiSpeech);
+$('magoiBook').onclick=()=>{$('magoiBookCard').classList.remove('hidden');say('Τώρα η ιστορία συνεχίζεται στην τάξη. Φτιάξτε ένα μονοπάτι με μεγάλα και μικρά αστέρια.');};
+$('magoiBookClose').onclick=()=>$('magoiBookCard').classList.add('hidden');
+$('magoiHome').onclick=()=>{if('speechSynthesis'in window)speechSynthesis.cancel();$('magoi').classList.add('hidden')};
+$('magoiNext').onclick=()=>{if(trailStep!==trailCoords.length)return;done.add('star');magoiBtn.classList.add('done');updateSky();$('magoi').classList.add('hidden');if(done.size===4){$('reveal').disabled=false;$('reveal').textContent='✨';$('guidingStar').classList.add('bright');say('Τα τέσσερα αστέρια άναψαν. Το μυστικό της Βηθλεέμ μάς περιμένει.')}else say('Ένα ακόμη αστέρι φωτίστηκε στον ουρανό. Συνεχίζουμε.')};
+</script>
+
+<style>
+#giftsStage{position:fixed;inset:0;z-index:40;background:#071025;display:grid;place-items:center;padding:8px}
+#giftsStage.hidden{display:none!important}
+.gifts-board{position:relative;width:min(100%,calc(96dvh * 1.77778));aspect-ratio:16/9;background:url('assets/dora_magon.jpg') center/100% 100% no-repeat;border:2px solid #c99b56;border-radius:14px;overflow:hidden;box-shadow:0 0 50px #000b}
+.gift-hotspot{position:absolute;top:56%;height:29%;width:20%;border:3px solid #ffe1a9;border-radius:42%;background:#54301020;box-shadow:0 0 14px 6px #f9bf6488;cursor:pointer;touch-action:manipulation;animation:giftPulse 2s ease-in-out infinite alternate}
+.gift-hotspot:nth-of-type(1){left:24%}.gift-hotspot:nth-of-type(2){left:44%}.gift-hotspot:nth-of-type(3){left:65%}
+.gift-hotspot.found{border-color:#fff6ca;box-shadow:0 0 25px 12px #ffe6a7a8;animation:none}
+@keyframes giftPulse{to{box-shadow:0 0 26px 10px #ffd17da9}}
+.gift-nav{position:absolute;bottom:3%;width:9%;height:15%;border:0;border-radius:50%;background:transparent;cursor:pointer}
+#giftsHome{left:1.5%}#giftsBook{left:45.5%}#giftsNext{right:1.5%}
+#giftsListen{position:absolute;top:2%;left:2%;width:clamp(42px,5vw,62px);aspect-ratio:1;border-radius:50%;background:#172849e8;border:2px solid #e8c589;color:white;font-size:26px;cursor:pointer}
+.gift-popup{position:absolute;inset:10% 24% 13%;border:4px solid #f3d392;border-radius:22px;background:linear-gradient(#243a59,#0c182e);box-shadow:0 0 0 200vmax #071020ba,0 10px 40px #000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:10px;z-index:5}
+.gift-popup.hidden{display:none!important}.gift-popup img{width:min(100%,390px);height:76%;object-fit:cover;border-radius:16px}.gift-popup button{border-radius:50%;background:#6b4724;color:white;border:2px solid #f6db9d;font-size:30px;width:58px;height:58px;cursor:pointer}
+.gifts-book{position:absolute;inset:13% 18%;border:3px solid #f4d69b;border-radius:25px;background:#f7e9c8;box-shadow:0 0 0 200vmax #071020ae;z-index:5;display:grid;place-items:center;text-align:center}
+.gifts-book.hidden{display:none!important}.gifts-book .three{display:flex;gap:15px;align-items:center;justify-content:center;font-size:clamp(35px,6vw,80px)}.gifts-book button{border-radius:50%;font-size:30px;background:#80502a;color:white;border:2px solid #f4d69b;padding:8px 18px}
+.gift-hotspot:focus-visible,.gift-nav:focus-visible{outline:4px solid #fff7c0;outline-offset:3px}
+@media(max-width:700px){.gift-popup{inset:10% 12%}.gift-hotspot{border-width:2px}}
+</style>
+<section id="giftsStage" class="hidden" aria-label="Τα δώρα των Μάγων"><div class="gifts-board">
+<button class="gift-hotspot" data-gift="0" aria-label="Άνοιξε το πρώτο δοχείο"></button><button class="gift-hotspot" data-gift="1" aria-label="Άνοιξε το δεύτερο δοχείο"></button><button class="gift-hotspot" data-gift="2" aria-label="Άνοιξε το τρίτο δοχείο"></button>
+<button id="giftsListen" aria-label="Άκου την αφήγηση">🔊</button><button class="gift-nav" id="giftsHome" aria-label="Επιστροφή στον χάρτη"></button><button class="gift-nav" id="giftsBook" aria-label="Άνοιξε το βιβλίο"></button><button class="gift-nav" id="giftsNext" aria-label="Ολοκλήρωσε την αποστολή"></button>
+<div class="gift-popup hidden" id="giftPopup" role="dialog" aria-label="Ανακάλυψη δώρου"><img id="giftCloseup" alt="Μεγέθυνση του δώρου"><button id="giftPopupClose" aria-label="Κλείσε">↩</button></div>
+<div class="gifts-book hidden" id="giftsBookCard" role="dialog" aria-label="Η δραστηριότητα στην τάξη"><div class="three" aria-label="Σεντούκι χρυσού, πήλινο δοχείο λιβανιού και μυροδοχείο σμύρνας"><span class="ancient-vessel chest">✦</span><span class="ancient-vessel pot">✧</span><span class="ancient-vessel flask">✦</span></div><button id="giftsBookClose" aria-label="Κλείσε το βιβλίο">↩</button></div>
+</div></section>
+<script>
+const giftsBtn=document.querySelector('.point[data-id="gifts"]');
+const giftsSpeech='Οι Μάγοι είχαν ετοιμάσει τρία πολύτιμα δώρα. Χρυσό, λιβάνι και σμύρνα. Πατήστε τα τρία δοχεία για να τα ανακαλύψετε.';
+const giftInfo=[{file:'gold.jpg',speech:'Χρυσός. Ένα πολύτιμο μέταλλο.'},{file:'frankincense.jpg',speech:'Λιβάνι. Μικροί, ανοιχτόχρωμοι κόκκοι αρωματικής ρητίνης.'},{file:'myrrh.jpg',speech:'Σμύρνα. Κομματάκια αρωματικής ρητίνης, σε κεχριμπαρένιες και καστανές αποχρώσεις.'}];
+let giftsOpened=new Set();
+function openGifts(){current='gifts';giftsOpened.clear();document.querySelectorAll('.gift-hotspot').forEach(b=>b.classList.remove('found'));$('giftPopup').classList.add('hidden');$('giftsBookCard').classList.add('hidden');$('giftsStage').classList.remove('hidden');say(giftsSpeech)}
+giftsBtn.onclick=openGifts;
+document.querySelectorAll('.gift-hotspot').forEach(b=>b.onclick=()=>{let i=Number(b.dataset.gift);giftsOpened.add(i);b.classList.add('found');$('giftCloseup').src='assets/'+giftInfo[i].file;$('giftCloseup').alt=['Χρυσά νομίσματα','Ανοιχτόχρωμοι κόκκοι λιβανιού','Καστανή και κεχριμπαρένια σμύρνα'][i];$('giftPopup').classList.remove('hidden');say(giftInfo[i].speech)});
+$('giftPopupClose').onclick=()=>{$('giftPopup').classList.add('hidden');if('speechSynthesis'in window)speechSynthesis.cancel()};
+$('giftsListen').onclick=()=>say(giftsSpeech);
+$('giftsBook').onclick=()=>{$('giftsBookCard').classList.remove('hidden');say('Στην τάξη ετοιμάστε ένα τραπέζι των Μάγων. Παρατηρήστε ένα σεντούκι με χρυσό, ένα πήλινο δοχείο με λιβάνι και ένα μικρό μυροδοχείο για τη σμύρνα. Χρησιμοποιήστε εικόνες ή ασφαλή ομοιώματα.');};
+$('giftsBookClose').onclick=()=>$('giftsBookCard').classList.add('hidden');
+$('giftsHome').onclick=()=>{if('speechSynthesis'in window)speechSynthesis.cancel();$('giftsStage').classList.add('hidden')};
+$('giftsNext').onclick=()=>{if(giftsOpened.size<3){say('Ας ανακαλύψουμε πρώτα και τα τρία δώρα.');return;}done.add('gifts');giftsBtn.classList.add('done');updateSky();$('giftsStage').classList.add('hidden');if(done.size===4){$('reveal').disabled=false;$('reveal').textContent='✨';$('guidingStar').classList.add('bright');say('Τα τέσσερα αστέρια άναψαν. Το μυστικό της Βηθλεέμ μάς περιμένει.')}else say('Ένα ακόμη αστέρι φωτίστηκε στον ουρανό. Συνεχίζουμε.');};
+</script>
+
+<style>
+/* Έκδοση 16: αφηγηματική σειρά, άγγελος και αρχαία δοχεία */
+.point.future{opacity:.38;filter:grayscale(.8);cursor:not-allowed}.point.available{outline:3px solid #ffe29b;box-shadow:0 0 28px 9px #f8d69a77;animation:nextGlow 2s infinite alternate}@keyframes nextGlow{to{box-shadow:0 0 36px 14px #ffe8aeaa}}
+.pasture-stage.angel-shown{background-image:url('assets/angel_shepherds.jpg')}
+.pasture-stage.angel-shown #sheepHit,.pasture-stage.angel-shown #fireHit,.pasture-stage.angel-shown #windHit{display:none}
+.pasture-stage.angel-shown .pasture-caption{bottom:14%;left:23%;width:54%;padding:7px;background:#152d50c9;border-radius:18px;font-size:clamp(13px,2vw,25px)}
+.ancient-vessel{position:relative;display:grid;place-items:center;color:#fce5a6;font-size:clamp(22px,4vw,46px);text-shadow:0 2px 5px #472b1b;border:4px solid #aa783f;box-shadow:inset 0 0 15px #ffffff66,0 9px 14px #4e341f66}
+.ancient-vessel.chest{width:clamp(65px,11vw,125px);height:clamp(55px,9vw,100px);border-radius:10px;background:linear-gradient(140deg,#7d4a20,#efc66c,#8d541f)}
+.ancient-vessel.chest:before{content:'';position:absolute;bottom:100%;left:-5%;width:110%;height:30%;border-radius:60% 60% 0 0;background:linear-gradient(#e4b15b,#79451d);border:3px solid #aa783f}
+.ancient-vessel.pot{width:clamp(60px,10vw,115px);height:clamp(70px,11vw,120px);border-radius:32% 32% 46% 46%;background:linear-gradient(90deg,#9b613d,#d9a66d,#935b38)}
+.ancient-vessel.pot:before{content:'';position:absolute;bottom:96%;left:20%;width:60%;height:12%;border-radius:30%;background:#9b613d;border:3px solid #78462a}
+.ancient-vessel.flask{width:clamp(54px,8vw,90px);height:clamp(75px,12vw,130px);border-radius:24% 24% 46% 46%;background:linear-gradient(90deg,#d8c59d,#f5e7c5,#bca579)}
+.ancient-vessel.flask:before{content:'';position:absolute;bottom:95%;left:34%;width:32%;height:27%;background:#e8d7b4;border:3px solid #aa916d;border-radius:10px 10px 0 0}
+</style>
+<script>
+// Η σειρά ακολουθεί την ιστορία: σπίτια → βοσκοί → ταξίδι Μάγων → δώρα.
+const journey=['homes','shepherds','star','gifts'];
+function updateJourney(){const next=journey.find(id=>!done.has(id));document.querySelectorAll('.point').forEach(b=>{const id=b.dataset.id;const can=done.has(id)||id===next;b.disabled=!can;b.classList.toggle('future',!can);b.classList.toggle('available',id===next);b.setAttribute('aria-label',({homes:'Τα σπίτια της Βηθλεέμ',shepherds:'Οι βοσκοί',star:'Το μονοπάτι των Μάγων',gifts:'Τα δώρα των Μάγων'})[id]+(!can?' — δεν έχει ανοίξει ακόμη':''))});}
+const previousUpdateSky=updateSky;updateSky=function(){previousUpdateSky();updateJourney()};
+$('begin').onclick=()=>{show('map');updateJourney();say('Πρώτα θα επισκεφτούμε τα σπίτια της Βηθλεέμ. Πατήστε το φωτεινό σημείο.');};
+$('narrateMap').onclick=()=>{const id=journey.find(id=>!done.has(id));say(id?({homes:'Πρώτα εξερευνούμε τα σπίτια της Βηθλεέμ.',shepherds:'Τώρα πάμε στο βοσκοτόπι, να συναντήσουμε τους βοσκούς.',star:'Τώρα ακολουθούμε το μονοπάτι των Μάγων.',gifts:'Οι Μάγοι έφτασαν. Ας ανακαλύψουμε τα δώρα τους.'})[id]:'Τα τέσσερα αστέρια άναψαν. Πατήστε τη φάτνη.');};
+$('restart').onclick=()=>{done.clear();document.querySelectorAll('.point').forEach(b=>b.classList.remove('done'));updateSky();$('reveal').disabled=true;$('reveal').textContent='🔒';$('guidingStar').classList.remove('bright');show('welcome')};
+const pastureStage=document.querySelector('.pasture-stage');let heardNature=new Set(),angelAppeared=false;
+function pastureStart(){heardNature.clear();angelAppeared=false;pastureStage.classList.remove('angel-shown');$('pastureCaption').textContent='';current='shepherds';$('pasture').classList.remove('hidden');say('Ο Πέτρος βρήκε τους βοσκούς κοντά στη φωτιά. Ας ακούσουμε τους ήχους της νύχτας. Πατήστε τη φωτιά, τον άνεμο και το πρόβατο.');}
+originalShepherdButton.onclick=pastureStart;
+function noteSound(key){heardNature.add(key);if(heardNature.size===3&&!angelAppeared){setTimeout(showAngel,1000)}}
+function showAngel(){if(angelAppeared||heardNature.size<3||$('pasture').classList.contains('hidden'))return;angelAppeared=true;pastureStage.classList.add('angel-shown');$('pastureCaption').textContent='✨';try{const ctx=new (window.AudioContext||window.webkitAudioContext)();[523,659,784].forEach((freq,i)=>{let osc=ctx.createOscillator(),gain=ctx.createGain();osc.type='sine';osc.frequency.value=freq;gain.gain.setValueAtTime(.0001,ctx.currentTime+i*.32);gain.gain.exponentialRampToValueAtTime(.08,ctx.currentTime+i*.32+.09);gain.gain.exponentialRampToValueAtTime(.0001,ctx.currentTime+i*.32+1.6);osc.connect(gain);gain.connect(ctx.destination);osc.start(ctx.currentTime+i*.32);osc.stop(ctx.currentTime+i*.32+1.7)});}catch(e){}setTimeout(()=>{if(!$('pasture').classList.contains('hidden'))say('Ξαφνικά, ένα λαμπρό φως φώτισε τον ουρανό. Ένας άγγελος έφερε το χαρμόσυνο μήνυμα. Μη φοβάστε! Σήμερα γεννήθηκε ο Χριστός!');},1250)}
+$('sheepHit').onclick=()=>{markPasture('sheepHit');const a=new Audio('sounds/sheep.mp3');a.volume=.8;a.play().catch(()=>{});noteSound('sheep')};
+$('fireHit').onclick=()=>{markPasture('fireHit');natureSound('fire');noteSound('fire')};
+$('windHit').onclick=()=>{markPasture('windHit');natureSound('wind');noteSound('wind')};
+$('pastureSoundscape').onclick=()=>{natureSound('fire');setTimeout(()=>natureSound('wind'),900);noteSound('fire');noteSound('wind')};
+$('pastureListen').onclick=()=>say(angelAppeared?'Μη φοβάστε! Σήμερα γεννήθηκε ο Χριστός!':'Ο Πέτρος βρήκε τους βοσκούς. Ακούστε τους τρεις ήχους της νύχτας.');
+
+$('pastureNext').onclick=()=>{if(!angelAppeared){say('Ας ακούσουμε πρώτα τη φωτιά, τον άνεμο και το πρόβατο, για να φανερωθεί το μήνυμα του αγγέλου.');return;}done.add('shepherds');originalShepherdButton.classList.add('done');updateSky();$('pasture').classList.add('hidden');say('Ένα ακόμη αστέρι φωτίστηκε. Τώρα θα ακολουθήσουμε το μονοπάτι των Μάγων.');};
+updateJourney();
+</script>
+
+<style>
+/* v17: storybook map, credits, unobstructed angel and visual activity book */
+.welcome{background-image:linear-gradient(0deg,#06112bd9,#09183144 65%,#06132a44),url('assets/petros.jpg')}
+.credits{margin:12px auto 0;padding:10px 24px;max-width:max-content;text-align:center;color:#fff2d0;background:#15223cbd;border:1px solid #d7b67b;border-radius:15px;font:clamp(12px,1.6vw,19px)/1.5 Georgia,serif;text-shadow:0 2px 5px #000}
+.map{background:linear-gradient(180deg,#0a1636,#253859)}
+.map .town{background:linear-gradient(180deg,#07162d55,#0a142c22),url('assets/spitia_vithleem.jpg') center/cover no-repeat;box-shadow:inset 0 0 60px #030c23,0 18px 55px #000a}
+.map .town:before,.map .town .hill,.map .town .house,.map .town .lantern{display:none}
+.map .point{z-index:7;background:#12233ab8;border:3px solid #f7dba7;box-shadow:0 0 18px #e6b56766}
+.map .sky-progress{z-index:6}.map .starbig{z-index:6}
+.pasture-stage.angel-shown .pasture-top,.pasture-stage.angel-shown #pastureSoundscape{display:none!important}
+/* Keep book and navigation accessible, but hide all sound-discovery controls during the angel reveal. */
+#classBook{position:fixed;inset:0;z-index:100;background:#071225dd;display:flex;align-items:center;justify-content:center;padding:3vh 3vw}
+#classBook.hidden{display:none!important}
+.class-book-pages{width:min(1050px,96vw);min-height:min(650px,86vh);position:relative;background:linear-gradient(95deg,#e2c590,#fff4d7 9%,#fff4dc 49%,#d7b982 50%,#fff3d5 52%,#f7e8c4 94%,#c79b61);border:12px solid #6e3b25;border-radius:18px 30px 30px 18px;box-shadow:0 15px 75px #000b, inset 0 0 22px #a97c4e;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:48px 30px 35px;color:#432c24;text-align:center}
+.class-book-pages:before{content:'✦  ✧  ✦';position:absolute;top:12px;color:#bb7e28;font-size:24px}
+.book-heading{font-size:clamp(22px,3.5vw,42px);margin:0;color:#623e24}
+.book-visual{font-size:clamp(54px,8vw,105px);display:flex;gap:clamp(8px,3vw,30px);align-items:center;justify-content:center;flex-wrap:wrap;filter:drop-shadow(0 8px 5px #92785b55)}
+.book-instruction{font-size:clamp(17px,2.2vw,28px);line-height:1.45;max-width:780px;margin:0}
+.book-close-v17{position:absolute;right:14px;top:10px;border:2px solid #8c5b35;background:#fff0ce;border-radius:50%;font-size:30px;width:52px;height:52px;color:#59351c}
+.book-voice{border:2px solid #9e6633;border-radius:25px;background:#e9bd78;color:#39261b;font-size:24px;padding:10px 24px}
+@media(max-width:650px){.class-book-pages{padding:42px 14px 20px;border-width:7px}.book-visual{font-size:48px}.book-instruction{font-size:17px}}
+/* Book is available only on the angel reveal, never during sound exploration. */
+#angelBook{display:none;left:50%;top:91%;width:8%;min-width:52px;min-height:52px;
+ background:#39250dd9;border:3px solid #f8d49b;border-radius:50%;color:#fff3d0;
+ font-size:clamp(24px,3.5vw,44px);place-items:center;z-index:12;box-shadow:0 0 15px #ffd78d77}
+.pasture-stage.angel-shown #angelBook{display:grid}
+</style>
+<div id="classBook" class="hidden" role="dialog" aria-modal="true" aria-label="Το βιβλίο δραστηριοτήτων">
+ <div class="class-book-pages"><button id="classBookClose" class="book-close-v17" aria-label="Κλείσιμο βιβλίου">✕</button>
+ <h2 id="classBookTitle" class="book-heading"></h2><div id="classBookVisual" class="book-visual"></div>
+ <p id="classBookText" class="book-instruction"></p><button id="classBookListen" class="book-voice" aria-label="Άκου τη δραστηριότητα">🔊 Άκου</button></div>
+</div>
+<script>
+const classroomBooks={
+ homes:{title:'Χτίζουμε ένα καταφύγιο',visual:'🧱 🏠 🧺',text:'Με τουβλάκια, κουτιά και υφάσματα χτίζουμε όλοι μαζί ένα μικρό καταφύγιο για τη Μαρία και τον Ιωσήφ.',voice:'Στην τάξη γινόμαστε μια ομάδα χτιστών. Φτιάχνουμε ένα μικρό καταφύγιο με τουβλάκια, κουτιά και υφάσματα.'},
+ shepherds:{title:'Η ορχήστρα της νύχτας',visual:'🔥 🌬️ 🐑 🎶',text:'Τρεις ομάδες ζωντανεύουν τη φωτιά, τον άνεμο και τα πρόβατα. Η νηπιαγωγός διευθύνει την ορχήστρα. Δυναμώνουμε, χαμηλώνουμε και σταματάμε τους ήχους όλοι μαζί.',voice:'Η πρώτη ομάδα κάνει τον άνεμο. Η δεύτερη τη φωτιά. Η τρίτη τα πρόβατα. Η νηπιαγωγός γίνεται μαέστρος. Παίζουμε δυνατά, σιγανά και σταματάμε όλοι μαζί.'},
+ star:{title:'Το μονοπάτι των αστεριών',visual:'⭐ ✦ ⭐ ✦ ⭐ ✦',text:'Απλώνουμε μεγάλα και μικρά χάρτινα αστέρια στο πάτωμα. Συνεχίζουμε το μοτίβο και περπατάμε στη διαδρομή.',voice:'Στην τάξη απλώνουμε μεγάλα και μικρά αστέρια στο πάτωμα. Συνεχίζουμε το μοτίβο και περπατάμε στη διαδρομή.'},
+ gifts:{title:'Το τραπέζι των Μάγων',visual:'🪙 🏺 ✨',text:'Στην τάξη συζητάμε για τα δώρα των Μάγων. Βλέπουμε εικόνες από χρυσό, λιβάνι και σμύρνα, καθώς και εικόνες από δώρα των Μάγων που υπάρχουν μέχρι σήμερα στο Άγιο Όρος.',voice:'Στην τάξη ετοιμάζουμε το τραπέζι των Μάγων. Βάζουμε ένα σεντούκι για τον χρυσό, ένα πήλινο δοχείο για το λιβάνι και ένα μυροδοχείο για τη σμύρνα. Παρατηρούμε εικόνες ή ασφαλή ομοιώματα.'}
+};
+let classBookSpeech='';
+function openClassBook(id){const b=classroomBooks[id];if(!b)return;classBookSpeech=b.voice;$('classBookTitle').textContent=b.title;$('classBookVisual').textContent=b.visual;$('classBookText').textContent=b.text;$('classBook').classList.remove('hidden');say(b.voice)}
+$('classBookClose').onclick=()=>{$('classBook').classList.add('hidden');if('speechSynthesis' in window)speechSynthesis.cancel()};
+$('classBookListen').onclick=()=>say(classBookSpeech);
+$('houseBook').onclick=()=>openClassBook('homes');
+$('angelBook').onclick=()=>{if(angelAppeared)openClassBook('shepherds');};
+
+$('magoiBook').onclick=()=>openClassBook('star');
+$('giftsBook').onclick=()=>openClassBook('gifts');
+// The angel's message is read aloud by the established narrator after the celestial chime.
+// Remove a potential standalone trail button in the houses scene without touching the three doors.
+[...document.querySelectorAll('#houses button')].forEach(b=>{if(/path|trail|μονοπάτι/i.test(b.id+' '+b.getAttribute('aria-label')))b.remove()});
+</script>
+
+<style>
+/* v17.12: Only three usable navigation controls on the angel illustration.
+   Four decorative sound icons are absent from the background artwork. */
+.pasture-stage.angel-shown #sheepHit,
+.pasture-stage.angel-shown #fireHit,
+.pasture-stage.angel-shown #windHit,
+.pasture-stage.angel-shown #pastureSoundscape,
+.pasture-stage.angel-shown #pastureListen,
+.pasture-stage.angel-shown #pastureCaption{display:none!important}
+.pasture-stage.angel-shown #pastureHome,
+.pasture-stage.angel-shown #pastureNext{
+  display:grid;place-items:center;background:#3b260de8;
+  border:3px solid #f6d29a;border-radius:50%;
+  box-shadow:0 0 18px #f6c97999;color:#fff7e5;
+  font-size:clamp(25px,3.4vw,45px);z-index:12;
+}
+.pasture-stage.angel-shown #pastureHome::after{content:'⌂';}
+.pasture-stage.angel-shown #pastureNext::after{content:'➜';}
+</style>
+
+<script id="audio-gifts-1713">
+/* The two supplied MP3 files are bundled for offline playback. */
+const recordedGiftsClass = new Audio('assets/gifts_classroom.mp3');
+const recordedMyrrhWord = new Audio('assets/myrrh_word.mp3');
+let currentRecording = null;
+function stopRecordedNarration(){
+  for(const a of [recordedGiftsClass,recordedMyrrhWord]){a.pause();a.currentTime=0;}
+  currentRecording=null;
+}
+function playRecordedNarration(a){
+  if('speechSynthesis' in window) speechSynthesis.cancel();
+  stopRecordedNarration();
+  currentRecording=a;
+  a.currentTime=0;
+  const attempt=a.play();
+  if(attempt && typeof attempt.catch==='function')attempt.catch(()=>{currentRecording=null;});
+}
+const originalOpenClassBook1713=openClassBook;
+openClassBook=function(id){
+  if(id==='gifts'){
+    stopRecordedNarration();
+    // Keep the same illustrated book and controls; do not invoke synthetic speech.
+    const b=classroomBooks.gifts;
+    classBookSpeech=b.voice;
+    $('classBookTitle').textContent=b.title;
+    $('classBookVisual').textContent=b.visual;
+    $('classBookText').textContent=b.text;
+    $('classBook').classList.remove('hidden');
+    playRecordedNarration(recordedGiftsClass);
+  } else {
+    stopRecordedNarration();
+    originalOpenClassBook1713(id);
+  }
+};
+$('classBookListen').addEventListener('click',()=>{
+  if(!$('classBook').classList.contains('hidden') && current==='gifts'){
+    // The existing synthetic voice handler fires first; cancel it immediately.
+    playRecordedNarration(recordedGiftsClass);
+  }
+});
+$('classBookClose').addEventListener('click',stopRecordedNarration);
+// The myrrh hotspot is the third gift; preserve the popup and completion logic.
+const myrrhHotspot1713=document.querySelector('.gift-hotspot[data-gift="2"]');
+const originalMyrrhClick1713=myrrhHotspot1713.onclick;
+myrrhHotspot1713.onclick=function(event){
+  originalMyrrhClick1713.call(this,event);
+  playRecordedNarration(recordedMyrrhWord);
+};
+$('giftPopupClose').addEventListener('click',stopRecordedNarration);
+$('giftsHome').addEventListener('click',stopRecordedNarration);
+$('giftsNext').addEventListener('click',stopRecordedNarration);
+</script>
+
+<style id="great-star-1714">
+/* The four completed station stars remain untouched. */
+#map #reveal.great-star-ready{display:block!important;position:absolute!important;left:47%!important;top:4%!important;right:auto!important;bottom:auto!important;transform:translateX(-50%);width:13%;height:23%;min-width:85px;min-height:85px;border:0!important;background:transparent!important;box-shadow:none!important;font-size:clamp(65px,9vw,140px)!important;color:#fff0aa;line-height:1;z-index:15!important;text-shadow:0 0 15px white,0 0 32px #ffd269,0 0 65px #ffcf66;animation:greatStarPulse 1.5s ease-in-out infinite alternate;cursor:pointer}
+#map #reveal.great-star-ready:focus-visible{outline:4px solid #fff;border-radius:50%}
+#map #reveal:not(.great-star-ready){display:none!important}
+@keyframes greatStarPulse{to{filter:brightness(1.5);transform:translateX(-50%) scale(1.08)}}
+#greatStarStage{position:fixed;inset:0;z-index:110;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:24px;background:radial-gradient(ellipse at center,#253d70,#07112c 72%);color:#fff4d4}
+#greatStarStage.hidden{display:none!important}
+#greatStarStage .great-star-art{font-size:clamp(140px,24vw,310px);color:#fff1aa;text-shadow:0 0 35px #fff,0 0 85px #f5c865;animation:greatStarPulseArt 2s infinite alternate;pointer-events:none}
+@keyframes greatStarPulseArt{to{filter:brightness(1.35);transform:scale(1.05)}}
+#greatStarStage .great-star-controls{display:flex;gap:16px}
+#greatStarStage button{border:2px solid #e6c78e;border-radius:20px;background:#263d61;color:white;padding:13px 22px;font-size:25px}
+</style>
+<section id="greatStarStage" class="hidden" aria-label="Το μεγάλο αστέρι">
+ <div class="great-star-art" aria-hidden="true">✦</div>
+ <div class="great-star-controls"><button id="greatStarReplay" aria-label="Άκου ξανά την αφήγηση">🔊</button><button id="greatStarBack" aria-label="Επιστροφή στον χάρτη">↩</button></div>
+</section>
+<script id="great-star-script-1714">
+const greatStarAudio=new Audio('assets/megalo_asteri.mp3');
+const angelIntroAudio=new Audio('assets/eisagogi_aggelon.mp3');
+function playAngelIntro(){if('speechSynthesis' in window)speechSynthesis.cancel();angelIntroAudio.pause();angelIntroAudio.currentTime=0;angelIntroAudio.play().catch(()=>{});}
+function playGreatStar(){if('speechSynthesis' in window)speechSynthesis.cancel();greatStarAudio.pause();greatStarAudio.currentTime=0;greatStarAudio.play().catch(()=>{});}
+const oldSkyGreatStar=updateSky;
+updateSky=function(){oldSkyGreatStar();const completed=done.size===4;const r=$('reveal');r.classList.toggle('great-star-ready',completed);r.disabled=!completed;r.textContent=completed?'✦':'🔒';r.setAttribute('aria-label',completed?'Ακολούθησε το μεγάλο αστέρι':'Το μεγάλο αστέρι δεν έχει φανεί ακόμη');};
+// Start the supplied recording directly from the final gift's click.
+const oldGiftsNextGreatStar=$('giftsNext').onclick;
+$('giftsNext').onclick=function(ev){const wasComplete=done.size===4;oldGiftsNextGreatStar.call(this,ev);if(!wasComplete&&done.size===4){playGreatStar();}};
+// The star leads only to the night-sky transition; angels and Nativity are next steps.
+$('reveal').onclick=()=>{if(done.size!==4)return;greatStarAudio.pause();$('greatStarStage').classList.remove('hidden');playAngelIntro();};
+$('greatStarReplay').onclick=playAngelIntro;
+$('greatStarBack').onclick=()=>{$('greatStarStage').classList.add('hidden');greatStarAudio.pause();angelIntroAudio.pause();};
+const oldRestartGreatStar=$('restart').onclick;
+$('restart').onclick=function(ev){greatStarAudio.pause();angelIntroAudio.pause();$('greatStarStage').classList.add('hidden');oldRestartGreatStar.call(this,ev);updateSky();};
+updateSky();
+</script>
+
+<style id="angel-choir-1716">
+#greatStarStage .great-star-art{cursor:pointer;pointer-events:auto}
+#greatStarForward{display:none}
+#greatStarForward.ready{display:inline-block}
+#angelChoirStage{position:fixed;inset:0;z-index:125;background:#09162e url('assets/angel_choir.jpg') center/contain no-repeat;display:flex;align-items:flex-end;justify-content:center;padding:0 0 3vh;box-sizing:border-box}
+#angelChoirStage.hidden{display:none!important}
+#angelChoirStage .choir-controls{display:flex;gap:16px;background:#0b1b3eaa;padding:10px 18px;border-radius:22px}
+#angelChoirStage button{border:2px solid #f4d99b;border-radius:16px;background:#23375e;color:#fff;padding:10px 18px;font-size:clamp(23px,3vw,34px);cursor:pointer}
+#angelChoirStage .choir-note{position:absolute;top:2%;right:2%;font:13px Arial,sans-serif;color:#fff8d6;background:#07152b99;padding:6px;border-radius:8px}
+</style>
+<section id="angelChoirStage" class="hidden" aria-label="Η χορωδία των αγγέλων">
+<div class="choir-note">Μουσική: «Χριστός γεννάται, δοξάσατε» — Σταμάτης Σπανουδάκης</div>
+<div class="choir-controls"><button id="choirReplay" aria-label="Άκου ξανά τους αγγέλους">🔊</button><button id="choirBack" aria-label="Επιστροφή στο αστέρι">↩</button></div>
+</section>
+<script id="angel-choir-script-1716">
+const choirAudio1716=new Audio('assets/angel_choir_excerpt.mp3');
+const starForward1716=document.createElement('button');starForward1716.id='greatStarForward';starForward1716.textContent='➜';starForward1716.setAttribute('aria-label','Συνέχεια στους αγγέλους');
+document.querySelector('#greatStarStage .great-star-controls').appendChild(starForward1716);
+let starReady1716=false;
+const oldStarIntro1716=playAngelIntro;
+playAngelIntro=function(){starReady1716=false;starForward1716.classList.remove('ready');oldStarIntro1716();};
+angelIntroAudio.addEventListener('ended',()=>{if(!$('greatStarStage').classList.contains('hidden')){starReady1716=true;starForward1716.classList.add('ready');}});
+function enterChoir1716(){if(!starReady1716)return;angelIntroAudio.pause();$('greatStarStage').classList.add('hidden');$('angelChoirStage').classList.remove('hidden');choirAudio1716.currentTime=0;choirAudio1716.play().catch(()=>{});}
+starForward1716.onclick=enterChoir1716;
+document.querySelector('#greatStarStage .great-star-art').onclick=enterChoir1716;
+$('choirReplay').onclick=()=>{choirAudio1716.pause();choirAudio1716.currentTime=0;choirAudio1716.play().catch(()=>{});};
+$('choirBack').onclick=()=>{choirAudio1716.pause();$('angelChoirStage').classList.add('hidden');$('greatStarStage').classList.remove('hidden');starReady1716=true;starForward1716.classList.add('ready');};
+const restartChoir1716=$('restart').onclick;
+$('restart').onclick=function(e){choirAudio1716.pause();$('angelChoirStage').classList.add('hidden');restartChoir1716.call(this,e);};
+</script>
+
+<style id="nativity-style-1717">
+#nativityStage{position:fixed;inset:0;z-index:145;background:#07152c url('assets/nativity_scene.jpg') center center/contain no-repeat;display:flex;align-items:flex-end;justify-content:center;padding:0 0 3vh;box-sizing:border-box}
+#nativityStage.hidden{display:none!important}
+#nativityStage .nativity-controls{display:flex;gap:14px;padding:10px 16px;background:#08172fba;border-radius:22px;align-items:center}
+#nativityStage button{border:2px solid #f4d99b;border-radius:16px;background:#23375e;color:white;padding:11px 20px;font-size:clamp(22px,3vw,33px);cursor:pointer}
+#nativityBack{font-size:25px}
+#choirForward{display:none}
+#choirForward.ready{display:inline-block}
+</style>
+<section id="nativityStage" class="hidden" aria-label="Η Γέννηση του Χριστού">
+<div class="nativity-controls"><button id="nativityBack" aria-label="Επιστροφή στη χορωδία">↩</button><button id="nativityReplay" aria-label="Άκου ξανά την ιστορία της Γέννησης">🔊</button></div>
+</section>
+<script id="nativity-script-1717">
+const nativityAudio1717=new Audio('assets/nativity_narration.mp3');
+const choirForward1717=document.createElement('button');
+choirForward1717.id='choirForward';choirForward1717.textContent='➜';choirForward1717.setAttribute('aria-label','Συνέχεια στη Γέννηση');
+document.querySelector('#angelChoirStage .choir-controls').appendChild(choirForward1717);
+let choirReady1717=false;
+function markChoirReady1717(){if(!$('angelChoirStage').classList.contains('hidden')){choirReady1717=true;choirForward1717.classList.add('ready');}}
+choirAudio1716.addEventListener('ended',markChoirReady1717);
+function enterNativity1717(){if(!choirReady1717)return;choirAudio1716.pause();$('angelChoirStage').classList.add('hidden');$('nativityStage').classList.remove('hidden');nativityAudio1717.pause();nativityAudio1717.currentTime=0;nativityAudio1717.play().catch(()=>{});}
+choirForward1717.onclick=enterNativity1717;
+$('nativityReplay').onclick=()=>{nativityAudio1717.pause();nativityAudio1717.currentTime=0;nativityAudio1717.play().catch(()=>{});};
+$('nativityBack').onclick=()=>{nativityAudio1717.pause();nativityAudio1717.currentTime=0;$('nativityStage').classList.add('hidden');$('angelChoirStage').classList.remove('hidden');choirReady1717=true;choirForward1717.classList.add('ready');};
+$('choirReplay').addEventListener('click',()=>{choirReady1717=false;choirForward1717.classList.remove('ready');});
+$('choirBack').addEventListener('click',()=>{choirReady1717=false;choirForward1717.classList.remove('ready');});
+const oldEnterChoir1717=starForward1716.onclick;
+starForward1716.onclick=function(e){choirReady1717=false;choirForward1717.classList.remove('ready');oldEnterChoir1717.call(this,e);};
+const oldStarArtEnter1717=document.querySelector('#greatStarStage .great-star-art').onclick;
+document.querySelector('#greatStarStage .great-star-art').onclick=function(e){choirReady1717=false;choirForward1717.classList.remove('ready');oldStarArtEnter1717.call(this,e);};
+$('restart').addEventListener('click',()=>{nativityAudio1717.pause();$('nativityStage').classList.add('hidden');choirReady1717=false;choirForward1717.classList.remove('ready');});
+</script>
+
+<style id="final-book-style-1718">
+#finalBook1718{position:fixed;inset:0;z-index:180;background:#071225e8;display:flex;align-items:center;justify-content:center;padding:3vh 3vw}
+#finalBook1718.hidden{display:none!important}
+#finalBook1718 .final-pages{width:min(1000px,96vw);max-height:94vh;overflow:auto;position:relative;background:linear-gradient(95deg,#e2c590,#fff4d7 9%,#fff4dc 49%,#d7b982 50%,#fff3d5 52%,#f7e8c4 94%,#c79b61);border:10px solid #6e3b25;border-radius:18px 30px 30px 18px;box-shadow:0 15px 75px #000b;padding:46px 25px 26px;color:#432c24;text-align:center}
+#finalBook1718 h2{font-size:clamp(24px,4vw,43px);margin:4px 0 15px}
+#finalBook1718 .final-art{font-size:clamp(50px,8vw,95px);margin:10px}
+#finalBook1718 p{font-size:clamp(18px,2.1vw,25px);line-height:1.5;margin:12px auto;max-width:790px}
+#finalBook1718 button{border:2px solid #9e6633;border-radius:18px;background:#e9bd78;color:#39261b;font-size:clamp(19px,2.6vw,27px);padding:10px 18px;cursor:pointer}
+#finalBookClose1718{position:absolute;right:10px;top:8px}
+#nativityStage .nativity-controls{flex-wrap:wrap;justify-content:center}
+#nativityStage .nativity-controls button{font-size:clamp(18px,2.6vw,30px)}
+</style>
+<section id="finalBook1718" class="hidden" role="dialog" aria-modal="true" aria-label="Η τελευταία δραστηριότητα της τάξης">
+<div class="final-pages">
+<button id="finalBookClose1718" aria-label="Κλείσιμο βιβλίου">✕</button>
+<h2>Η Γέννηση ζωντανεύει!</h2>
+<div class="final-art" aria-hidden="true">👼 🐑 ⭐ 🎁</div>
+<p>Διαλέγουμε ρόλους και ζωντανεύουμε την ιστορία της Γέννησης! Η νηπιαγωγός αφηγείται και τα παιδιά παρουσιάζουν την ιστορία με τις κινήσεις τους.</p>
+<button id="finalBookListen1718" aria-label="Άκου ξανά τη δραστηριότητα">🔊 Άκου</button>
+</div>
+</section>
+<script id="final-book-script-1718">
+(function(){
+ const book=document.getElementById('finalBook1718');
+ const narration=nativityAudio1717;
+ const activity=new Audio('assets/final_class_activity.mp3');
+ const controls=document.querySelector('#nativityStage .nativity-controls');
+ const bookButton=document.createElement('button');
+ bookButton.id='nativityBook1718';bookButton.textContent='📖';
+ bookButton.setAttribute('aria-label','Η τελευταία δραστηριότητα στην τάξη');
+ const replayButton=document.createElement('button');
+ replayButton.id='nativityRestart1718';replayButton.textContent='↻';
+ replayButton.setAttribute('aria-label','Παίζουμε ξανά από την αρχή');
+ controls.append(bookButton,replayButton);
+ function stopActivity(){activity.pause();activity.currentTime=0;}
+ function playActivity(){stopActivity();activity.play().catch(()=>{});}
+ bookButton.addEventListener('click',()=>{
+   narration.pause();book.classList.remove('hidden');playActivity();
+ });
+ document.getElementById('finalBookListen1718').addEventListener('click',playActivity);
+ document.getElementById('finalBookClose1718').addEventListener('click',()=>{
+   stopActivity();book.classList.add('hidden');
+ });
+ replayButton.addEventListener('click',()=>{
+   stopActivity();narration.pause();book.classList.add('hidden');
+   document.getElementById('restart').click();
+ });
+ document.getElementById('nativityBack').addEventListener('click',()=>{
+   stopActivity();book.classList.add('hidden');
+ });
+ document.getElementById('restart').addEventListener('click',()=>{
+   stopActivity();book.classList.add('hidden');
+ });
+})();
+</script>
+
+</body></html>
+<!-- 17.9: pasture illustration cleaned of footprints and book; activity book remains available on angel screen later. -->
